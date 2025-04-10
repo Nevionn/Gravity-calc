@@ -1,47 +1,77 @@
 /** @jsxImportSource @emotion/react */
 "use client";
 import "./globals.css";
-import Navbar from "./_components/Navbar";
 import { css } from "@emotion/react";
-import { Box, Grid, Section } from "@radix-ui/themes";
+import { Box, Flex, Text } from "@radix-ui/themes";
+import Navbar from "./_components/Navbar";
+import InputWeight from "./_components/InputWeight";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main css={styles.root}>
-        {/* <Section size="2">
-
-        </Section> */}
-        {/* <h1 css={styles.title}>Привет, космос!</h1>
-        <h1 css={styles.title}>Привет, космос!</h1> */}
-
-        <Box
-          py="1"
-          style={{
-            backgroundColor: "var(--gray-a2)",
-            borderRadius: "var(--radius-3)",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        ></Box>
+      <main css={styles.bgItem}>
+        <Flex justify="center" align="center" direction="column">
+          <Text size="9" weight="bold" css={styles.title}>
+            Узнай свой вес во Вселенной
+          </Text>
+          <Text size="6" weight="bold" css={styles.text}>
+            Введите свой вес на Земле и узнайте, сколько бы вы весели на других
+            космических объектах Солнечной системы.
+            <br />
+            Гравитация — удивительная сила!
+          </Text>
+          <Box css={styles.spacingBox} />
+          <InputWeight />
+        </Flex>
       </main>
     </>
   );
 }
 
 const styles = {
-  root: css({
+  bgItem: css({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "auto",
+    height: "500px",
     width: "100%",
-    backgroundColor: "transparent",
+    backgroundImage: `url('/backgrounds/sky.webp')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   }),
-  title: css({
-    fontSize: 20,
-    marginBottom: 12,
-    color: "black",
+  testFlexItem: css({
+    backgroundColor: "grey",
   }),
+  spacingBox: css({
+    height: "20px",
+  }),
+  textLabelWrapper: css({
+    alignSelf: "flex-start",
+    marginBottom: "10px",
+  }),
+  title: css`
+    background-image: linear-gradient(
+      to right,
+      rgb(210, 49, 210),
+      rgb(114, 14, 186)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+
+    @media (max-width: 430px) {
+      font-size: 22px;
+    }
+  `,
+  text: css`
+    white-space: pre-line;
+    text-align: center;
+    font-size: 20px;
+
+    @media (max-width: 430px) {
+      font-size: 16px;
+    }
+  `,
 };

@@ -23,7 +23,7 @@ export default function Navbar() {
         <Container py="6">
           <Flex justify="between" align="center">
             {/* Логотип */}
-            <Text size="7" weight="bold" css={styles.text}>
+            <Text size="7" weight="bold" css={styles.title}>
               <RadixLink asChild underline="none" css={styles.link}>
                 <NextLink href="/">🚀 GravityCalc</NextLink>
               </RadixLink>
@@ -66,7 +66,7 @@ export default function Navbar() {
 }
 
 const styles = {
-  text: css`
+  title: css`
     background-image: linear-gradient(
       to right,
       rgb(210, 49, 210),
@@ -80,6 +80,10 @@ const styles = {
     &:hover {
       filter: brightness(1.2);
     }
+
+    @media (max-width: 430px) {
+      font-size: 22px;
+    }
   `,
   link: css({
     color: "transparent",
@@ -90,6 +94,10 @@ const styles = {
     transition: "color 0.3s ease",
     "&:hover": {
       color: "#b3f0ff",
+    },
+
+    "@media (max-width: 430px)": {
+      fontSize: 14,
     },
   }),
 };
