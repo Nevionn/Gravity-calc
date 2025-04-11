@@ -7,6 +7,7 @@ import { Box, Flex, Text } from "@radix-ui/themes";
 import { planets } from "./_lib/planets";
 import Navbar from "./_components/Navbar";
 import InputWeight from "./_components/InputWeight";
+import FallingStars from "./_components/FallingStars";
 
 export default function Home() {
   const [weight, setWeight] = useState(0);
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <main>
         <div css={styles.bgItem}>
+          <FallingStars />
           <Flex css={styles.titleFlex}>
             <h1 css={styles.title}>Узнай свой вес во Вселенной</h1>
             <p css={styles.subtitle}>
@@ -78,14 +80,14 @@ const styles = {
     height: "600px",
     width: "100%",
     marginTop: 20,
-    backgroundColor: "#000",
-    backgroundImage: `
-      radial-gradient(white 1px, transparent 0),
-      radial-gradient(white 1px, transparent 0)
-    `,
-    backgroundSize: "100px 100px, 150px 150px",
-    backgroundPosition: "0 0, 50px 50px",
-    animation: "starsFall 30s linear infinite",
+    // backgroundColor: "#000",
+    // backgroundImage: `
+    //   radial-gradient(white 1px, transparent 0),
+    //   radial-gradient(white 1px, transparent 0)
+    // `,
+    // backgroundSize: "100px 100px, 150px 150px",
+    // backgroundPosition: "0 0, 50px 50px",
+    // animation: "starsFall 30s linear infinite",
   }),
   titleFlex: css({
     justifyContent: "center",
