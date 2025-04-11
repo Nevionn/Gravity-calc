@@ -1,5 +1,12 @@
 export const planets = [
   {
+    name: "Солнце",
+    gravity: 27.94,
+    color: "#ffcc00",
+    icon: "☀️",
+    description: "Наша звезда и источник света",
+  },
+  {
     name: "Меркурий",
     gravity: 0.38,
     color: "#a5a5a5",
@@ -12,6 +19,13 @@ export const planets = [
     color: "#e5c16c",
     icon: "♀",
     description: "Горячая и таинственная",
+  },
+  {
+    name: "Луна",
+    gravity: 0.17,
+    color: "#cccccc",
+    icon: "🌙",
+    description: "Спутник Земли",
   },
   {
     name: "Марс",
@@ -54,5 +68,19 @@ export const planets = [
     color: "#d6d6d6",
     icon: "❄️",
     description: "Карликовая планета",
+  },
+  {
+    name: "Титан",
+    gravity: 0.14,
+    color: "#d4af37",
+    icon: "🟠",
+    description: "Спутник Сатурна с атмосферой",
+  },
+  {
+    name: "Европа",
+    gravity: 0.13,
+    color: "#b0c4de",
+    icon: "🌐",
+    description: "Ледяной спутник Юпитера",
   },
 ];

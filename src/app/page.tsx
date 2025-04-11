@@ -80,14 +80,6 @@ const styles = {
     height: "600px",
     width: "100%",
     marginTop: 20,
-    // backgroundColor: "#000",
-    // backgroundImage: `
-    //   radial-gradient(white 1px, transparent 0),
-    //   radial-gradient(white 1px, transparent 0)
-    // `,
-    // backgroundSize: "100px 100px, 150px 150px",
-    // backgroundPosition: "0 0, 50px 50px",
-    // animation: "starsFall 30s linear infinite",
   }),
   titleFlex: css({
     justifyContent: "center",
