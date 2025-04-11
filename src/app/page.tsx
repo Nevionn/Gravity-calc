@@ -70,16 +70,22 @@ export default function Home() {
 
 const styles = {
   bgItem: css({
+    position: "relative",
+    overflow: "hidden",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     height: "600px",
     width: "100%",
     marginTop: 20,
-    backgroundImage: `url('/backgrounds/sky.webp')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
+    backgroundColor: "#000",
+    backgroundImage: `
+      radial-gradient(white 1px, transparent 0),
+      radial-gradient(white 1px, transparent 0)
+    `,
+    backgroundSize: "100px 100px, 150px 150px",
+    backgroundPosition: "0 0, 50px 50px",
+    animation: "starsFall 30s linear infinite",
   }),
   titleFlex: css({
     justifyContent: "center",
