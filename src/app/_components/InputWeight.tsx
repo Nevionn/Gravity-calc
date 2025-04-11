@@ -3,10 +3,29 @@
 import { css } from "@emotion/react";
 import { useState } from "react";
 import { Box, Flex, Text, Button, Slider, Checkbox } from "@radix-ui/themes";
+import { planets } from "../_lib/planets";
 
-export default function InputWeight() {
-  const [weight, setWeight] = useState(0);
+export default function InputWeight({
+  weight,
+  setWeight,
+  setPlanetWeights,
+}: {
+  weight: number;
+  setWeight: React.Dispatch<React.SetStateAction<number>>;
+  setPlanetWeights: React.Dispatch<
+    React.SetStateAction<{ [key: string]: number }>
+  >;
+}) {
   const [isHuman, setIsHuman] = useState(true);
+
+  const calculateWeights = () => {
+    const newPlanetWeights = planets.reduce((acc, planet) => {
+      acc[planet.name] = parseFloat((weight * planet.gravity).toFixed(2));
+      return acc;
+    }, {} as { [key: string]: number });
+
+    setPlanetWeights(newPlanetWeights);
+  };
 
   return (
     <Box css={styles.panel}>
@@ -94,7 +113,9 @@ export default function InputWeight() {
             </Text>
           </Flex>
           <Box css={styles.buttonWrapper}>
-            <Button css={styles.button}>Рассчитать</Button>
+            <Button css={styles.button} onClick={calculateWeights}>
+              Рассчитать
+            </Button>
           </Box>
         </Flex>
       </Flex>

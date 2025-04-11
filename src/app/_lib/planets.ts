@@ -1,0 +1,58 @@
+export const planets = [
+  {
+    name: "Меркурий",
+    gravity: 0.38,
+    color: "#a5a5a5",
+    icon: "☿",
+    description: "Ближайшая к Солнцу",
+  },
+  {
+    name: "Венера",
+    gravity: 0.91,
+    color: "#e5c16c",
+    icon: "♀",
+    description: "Горячая и таинственная",
+  },
+  {
+    name: "Марс",
+    gravity: 0.38,
+    color: "#c1440e",
+    icon: "♂",
+    description: "Красная планета",
+  },
+  {
+    name: "Юпитер",
+    gravity: 2.34,
+    color: "#e0c17c",
+    icon: "♃",
+    description: "Газовый гигант",
+  },
+  {
+    name: "Сатурн",
+    gravity: 1.07,
+    color: "#f5d76e",
+    icon: "🪐",
+    description: "Властелин колец",
+  },
+  {
+    name: "Уран",
+    gravity: 0.89,
+    color: "#64d8cb",
+    icon: "🔷",
+    description: "Ледяной гигант",
+  },
+  {
+    name: "Нептун",
+    gravity: 1.14,
+    color: "#4d7cff",
+    icon: "🔵",
+    description: "Синий гигант",
+  },
+  {
+    name: "Плутон",
+    gravity: 0.06,
+    color: "#d6d6d6",
+    icon: "❄️",
+    description: "Карликовая планета",
+  },
+];

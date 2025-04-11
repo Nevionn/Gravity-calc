@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-"use client";
 import { css } from "@emotion/react";
 import {
   Box,
@@ -13,13 +12,7 @@ import NextLink from "next/link";
 export default function Navbar() {
   return (
     <nav aria-label="Главная навигация">
-      <Box
-        as="div"
-        style={{
-          borderBottom: "1px solid var(--gray-a4)",
-          backgroundColor: "#150e1b",
-        }}
-      >
+      <Box as="div" css={styles.navbarContainer}>
         <Container py="6">
           <Flex justify="between" align="center">
             {/* Логотип */}
@@ -33,7 +26,6 @@ export default function Navbar() {
               <RadixLink
                 asChild
                 underline="hover"
-                // color="sky"
                 weight="bold"
                 css={styles.emumsLinks}
               >
@@ -42,7 +34,6 @@ export default function Navbar() {
               <RadixLink
                 asChild
                 underline="hover"
-                // color="sky"
                 weight="bold"
                 css={styles.emumsLinks}
               >
@@ -51,7 +42,6 @@ export default function Navbar() {
               <RadixLink
                 asChild
                 underline="hover"
-                // color="sky"
                 weight="bold"
                 css={styles.emumsLinks}
               >
@@ -66,6 +56,15 @@ export default function Navbar() {
 }
 
 const styles = {
+  navbarContainer: css({
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    zIndex: 10,
+    borderBottom: "1px solid var(--gray-a4)",
+    backgroundColor: "#150e1b",
+  }),
   title: css`
     background-image: linear-gradient(
       to right,
@@ -81,7 +80,7 @@ const styles = {
       filter: brightness(1.2);
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 472px) {
       font-size: 22px;
     }
   `,
@@ -96,8 +95,12 @@ const styles = {
       color: "#b3f0ff",
     },
 
-    "@media (max-width: 430px)": {
-      fontSize: 14,
+    "@media (max-width: 472px)": {
+      fontSize: "14px",
+    },
+
+    "@media (max-width: 360px)": {
+      fontSize: "12px",
     },
   }),
 };
