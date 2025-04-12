@@ -9,11 +9,10 @@
 # Стек технологий
 
 <div align="center" style="display: flex; align-items: center;">
-  <img src="https://images.ctfassets.net/c63hsprlvlya/IacLLeOBR5WCvdCPqKuff/6860b5cc464c4f54703a2befa3f706b4/nextjs3.webp" alt="Next.js Logo" width="100" height="100">
-  <span style="margin: 0 10px; font-size: 24px;"> </span>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="ts Logo" width="100" height="100">
-  <span style="margin: 0 10px; font-size: 24px;"> </span>
-  <img src="https://logowik.com/content/uploads/images/radix-ui3498.logowik.com.webp" alt="radix Logo" width="100" height="100">
+<img src="https://cdn.simpleicons.org/nextdotjs/000?width=40" alt="Next.js Logo" />
+<img src="https://cdn.simpleicons.org/typescript/3178c6?width=40" alt="TypeScript Logo" />
+<img src="https://cdn.simpleicons.org/radixui/000?width=40" alt="Radix Logo" />
+
 </div>
 
 # Установка из исходников
