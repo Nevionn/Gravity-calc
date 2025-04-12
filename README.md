@@ -9,9 +9,9 @@
 # Стек технологий
 
 <div align="center" style="display: flex; align-items: center;">
-<img src="https://cdn.simpleicons.org/nextdotjs/000?width=40" alt="Next.js Logo" />
-<img src="https://cdn.simpleicons.org/typescript/3178c6?width=40" alt="TypeScript Logo" />
-<img src="https://cdn.simpleicons.org/radixui/000?width=40" alt="Radix Logo" />
+<img src="https://cdn.simpleicons.org/nextdotjs/000?width=40" alt="Next.js Logo" width="100" height="100" />
+<img src="https://cdn.simpleicons.org/typescript/3178c6?width=40" alt="TypeScript Logo" width="100" height="100" />
+<img src="https://cdn.simpleicons.org/radixui/000?width=40" alt="Radix Logo" width="100" height="100" />
 
 </div>
 
