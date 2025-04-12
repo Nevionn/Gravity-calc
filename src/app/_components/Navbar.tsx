@@ -31,22 +31,6 @@ export default function Navbar() {
               >
                 <NextLink href="/planets">Планеты</NextLink>
               </RadixLink>
-              <RadixLink
-                asChild
-                underline="hover"
-                weight="bold"
-                css={styles.emumsLinks}
-              >
-                <NextLink href="/about">О нас</NextLink>
-              </RadixLink>
-              <RadixLink
-                asChild
-                underline="hover"
-                weight="bold"
-                css={styles.emumsLinks}
-              >
-                <NextLink href="/contact">Контакты</NextLink>
-              </RadixLink>
             </Flex>
           </Flex>
         </Container>
@@ -92,7 +76,7 @@ const styles = {
     color: "white",
     transition: "color 0.3s ease",
     "&:hover": {
-      color: "#b3f0ff",
+      color: "#b084f9",
     },
 
     "@media (max-width: 472px)": {
