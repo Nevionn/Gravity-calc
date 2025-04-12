@@ -63,14 +63,7 @@ export default function InputWeight({
             {isHuman ? 150 : 10000}
           </Text>
         </div>
-        <Flex
-          justify="between"
-          align="center"
-          direction="row"
-          gap="20px"
-          width="100%"
-          css={styles.bottomFlex}
-        >
+        <Flex css={styles.bottomFlex}>
           <Box css={styles.indicatorWrapper}>
             <div css={styles.inputIndicator}>
               <Text size="3" weight="bold">
@@ -142,11 +135,11 @@ const styles = {
     borderRadius: "12px",
     height: "200px",
     width: 420,
-    minWidth: 300,
+    minWidth: 310,
     maxWidth: 500,
 
     "@media (max-width: 430px)": {
-      width: 300,
+      width: 310,
     },
   }),
   slider: css({
@@ -159,6 +152,11 @@ const styles = {
     justifyContent: "space-between",
   }),
   bottomFlex: css({
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    gap: "32px",
+    width: "100%",
     marginTop: "20px",
   }),
   indicatorWrapper: css({
@@ -178,7 +176,7 @@ const styles = {
     color: "white",
 
     "@media (max-width: 430px)": {
-      padding: "10px 30px",
+      padding: "10px 22px",
     },
   }),
   arrowsItem: css({
@@ -209,6 +207,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "6px",
+
+    "@media (max-width: 450px)": {
+      marginLeft: "16px",
+    },
   }),
   buttonWrapper: css({
     alignSelf: "flex-end",

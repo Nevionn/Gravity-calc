@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-
 import { css } from "@emotion/react";
 import { Box, Flex, Text } from "@radix-ui/themes";
 import { planets } from "../_lib/planets";
@@ -78,6 +77,14 @@ const styles = {
       transform: "scale(1.03)",
       boxShadow:
         "0 0 20px 5px rgba(138, 43, 226, 0.4), 0 4px 12px rgba(0,0,0,0.3)",
+    },
+
+    "@media (max-width: 1300px)": {
+      padding: "16px",
+      margin: 10,
+      width: "94%",
+      alignItems: "center",
+      textAlign: "center",
     },
   }),
   icon: css({

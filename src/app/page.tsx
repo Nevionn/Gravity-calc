@@ -3,7 +3,7 @@
 import "./globals.css";
 import { css } from "@emotion/react";
 import { useState } from "react";
-import { Box, Flex, Text } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import InputWeight from "./_components/InputWeight";
