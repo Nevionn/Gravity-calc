@@ -3,13 +3,13 @@
 [Калькулятор для расчета веса на различных космических объектах]()
 
 <div align="center" style="display: flex; align-items: center;">
-  <img src="./screenshot/preview.png" alt="App preview1" width="600" height="800">
+  <img src="./public/preview.png" alt="App preview1" width="600" height="800">
 </div>
 
 # Стек технологий
 
 <div align="center" style="display: flex; align-items: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Next.js_wordmark.svg/2560px-Next.js_wordmark.svg.png" alt="Next.js Logo" width="100" height="100">
+  <img src="https://images.ctfassets.net/c63hsprlvlya/IacLLeOBR5WCvdCPqKuff/6860b5cc464c4f54703a2befa3f706b4/nextjs3.webp" alt="Next.js Logo" width="100" height="100">
   <span style="margin: 0 10px; font-size: 24px;"> </span>
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="ts Logo" width="100" height="100">
   <span style="margin: 0 10px; font-size: 24px;"> </span>
