@@ -19,7 +19,7 @@ export default function InputWeight({
 }) {
   const [isHuman, setIsHuman] = useState(true);
 
-  const navbarHeight = 80;
+  const navbarHeight = 76;
 
   const calculateWeights = () => {
     const newPlanetWeights = planets.reduce((acc, planet) => {

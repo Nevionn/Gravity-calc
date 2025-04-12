@@ -11,7 +11,7 @@ import NextLink from "next/link";
 import { scrollToSection } from "../_lib/scrollToSection";
 
 export default function Navbar() {
-  const navbarHeight = 80;
+  const navbarHeight = 76;
 
   return (
     <nav aria-label="Главная навигация">
