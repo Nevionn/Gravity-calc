@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav aria-label="Главная навигация">
       <Box as="div" css={styles.navbarContainer}>
         <Container py="6">
-          <Flex justify="between" align="center">
+          <Flex justify="between" align="center" css={styles.navbarFlex}>
             {/* Логотип */}
             <Text size="7" weight="bold" css={styles.title}>
               <RadixLink asChild underline="none" css={styles.link}>
@@ -59,6 +59,11 @@ const styles = {
     zIndex: 10,
     borderBottom: "1px solid var(--gray-a4)",
     backgroundColor: "#150e1b",
+  }),
+  navbarFlex: css({
+    "@media (max-width: 1200px)": {
+      padding: "0 20px",
+    },
   }),
   title: css`
     background-image: linear-gradient(
