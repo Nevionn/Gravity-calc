@@ -32,6 +32,16 @@ export default function InputWeight({
     scrollToSection("planetsSection", navbarHeight);
   };
 
+  const resetWeights = () => {
+    setWeight(0);
+    setPlanetWeights(
+      planets.reduce((acc, planet) => {
+        acc[planet.name] = 0;
+        return acc;
+      }, {} as { [key: string]: number })
+    );
+  };
+
   return (
     <Box css={styles.panel}>
       <Box css={styles.textLabelWrapper}>
@@ -100,7 +110,8 @@ export default function InputWeight({
             <Checkbox
               checked={isHuman}
               onCheckedChange={(val) => {
-                setIsHuman(!!val), setWeight(0);
+                setIsHuman(!!val);
+                resetWeights();
               }}
               size="2"
               color="indigo"
