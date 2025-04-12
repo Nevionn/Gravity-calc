@@ -8,20 +8,10 @@ import {
   Link as RadixLink,
 } from "@radix-ui/themes";
 import NextLink from "next/link";
+import { scrollToSection } from "../_lib/scrollToSection";
 
 export default function Navbar() {
   const navbarHeight = 80;
-
-  const scrollToPlanets = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const planetsSection = document.getElementById("planetsSection");
-    if (planetsSection) {
-      window.scrollTo({
-        top: planetsSection.offsetTop - navbarHeight,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <nav aria-label="Главная навигация">
@@ -42,7 +32,15 @@ export default function Navbar() {
                 weight="bold"
                 css={styles.emumsLinks}
               >
-                <button onClick={scrollToPlanets}>Планеты</button>
+                <NextLink
+                  href="#planetsSection"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("planetsSection", navbarHeight);
+                  }}
+                >
+                  Планеты
+                </NextLink>
               </RadixLink>
             </Flex>
           </Flex>

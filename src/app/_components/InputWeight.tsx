@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { useState } from "react";
 import { Box, Flex, Text, Button, Slider, Checkbox } from "@radix-ui/themes";
 import { planets } from "../_lib/planets";
+import { scrollToSection } from "../_lib/scrollToSection";
 
 export default function InputWeight({
   weight,
@@ -18,6 +19,8 @@ export default function InputWeight({
 }) {
   const [isHuman, setIsHuman] = useState(true);
 
+  const navbarHeight = 80;
+
   const calculateWeights = () => {
     const newPlanetWeights = planets.reduce((acc, planet) => {
       acc[planet.name] = parseFloat((weight * planet.gravity).toFixed(2));
@@ -25,6 +28,8 @@ export default function InputWeight({
     }, {} as { [key: string]: number });
 
     setPlanetWeights(newPlanetWeights);
+
+    scrollToSection("planetsSection", navbarHeight);
   };
 
   return (
