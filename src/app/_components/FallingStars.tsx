@@ -24,7 +24,7 @@ export default function Starfield() {
       ctx.fillRect(0, 0, width, height);
 
       ctx.fillStyle = "#ffffff";
-      for (let star of stars) {
+      for (const star of stars) {
         star.y += star.speedY;
         if (star.y > height) {
           star.y = 0;

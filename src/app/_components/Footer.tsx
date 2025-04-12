@@ -19,10 +19,12 @@ export default function Footer() {
       }
     );
 
-    if (footerRef.current) observer.observe(footerRef.current);
+    // Создаем локальную переменную для хранения ссылки на footerRef.current
+    const footerElement = footerRef.current;
+    if (footerElement) observer.observe(footerElement);
 
     return () => {
-      if (footerRef.current) observer.unobserve(footerRef.current);
+      if (footerElement) observer.unobserve(footerElement);
     };
   }, []);
 
