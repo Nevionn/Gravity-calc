@@ -123,9 +123,10 @@ export default function InputWeight({
           </Flex>
           <Box css={styles.buttonWrapper}>
             <Button
+              aria-label="Рассчитать значения"
               css={styles.button}
               onClick={calculateWeights}
-              aria-label="Рассчитать значения"
+              disabled={weight === 0}
             >
               Рассчитать
             </Button>
