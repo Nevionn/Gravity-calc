@@ -10,7 +10,7 @@ interface PlanetsProps {
 
 export default function PlanetsGrid({ planetWeights }: PlanetsProps) {
   return (
-    <div css={styles.planetsItem}>
+    <div id="planetsSection" css={styles.planetsItem}>
       <Flex css={styles.planetsFlex}>
         <Text css={styles.textYourWeight}>Ваш вес на других объектах</Text>
         <div css={styles.gridContainer}>

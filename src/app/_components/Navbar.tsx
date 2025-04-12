@@ -10,6 +10,19 @@ import {
 import NextLink from "next/link";
 
 export default function Navbar() {
+  const navbarHeight = 80;
+
+  const scrollToPlanets = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const planetsSection = document.getElementById("planetsSection");
+    if (planetsSection) {
+      window.scrollTo({
+        top: planetsSection.offsetTop - navbarHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav aria-label="Главная навигация">
       <Box as="div" css={styles.navbarContainer}>
@@ -29,7 +42,7 @@ export default function Navbar() {
                 weight="bold"
                 css={styles.emumsLinks}
               >
-                <NextLink href="/planets">Планеты</NextLink>
+                <button onClick={scrollToPlanets}>Планеты</button>
               </RadixLink>
             </Flex>
           </Flex>
