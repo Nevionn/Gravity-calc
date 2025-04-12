@@ -5,9 +5,11 @@ import { css } from "@emotion/react";
 import { useState } from "react";
 import { Box, Flex, Text } from "@radix-ui/themes";
 import Navbar from "./_components/Navbar";
+import Footer from "./_components/Footer";
 import InputWeight from "./_components/InputWeight";
 import FallingStars from "./_components/FallingStars";
 import PlanetsGrid from "./_components/PlanetsGrid";
+import GravityInfo from "./_components/GravityInfo";
 
 export default function Home() {
   const [weight, setWeight] = useState(0);
@@ -17,8 +19,8 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <main role="main">
+        <Navbar />
         <div css={styles.bgItem}>
           <FallingStars />
           <Flex css={styles.titleFlex}>
@@ -38,20 +40,8 @@ export default function Home() {
           </Flex>
         </div>
         <PlanetsGrid planetWeights={planetWeights} />
-        <div css={styles.infoItem}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              padding: "20px",
-              backgroundColor: "grey",
-            }}
-          >
-            <Text style={{ fontSize: "32px", color: "#b084f9" }}>
-              Как работает гравитация ?
-            </Text>
-          </div>
-        </div>
+        <GravityInfo />
+        <Footer />
       </main>
     </>
   );
@@ -72,17 +62,6 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-  }),
-  infoItem: css({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "start",
-    height: "auto",
-    width: "100%",
-    backgroundColor: "#1e1e1e",
-  }),
-  testFlexItem: css({
-    backgroundColor: "grey",
   }),
   spacingBox: css({
     height: "20px",

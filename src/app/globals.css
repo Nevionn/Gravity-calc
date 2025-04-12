@@ -2,15 +2,4 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: burlywood !important;
-  /* height: 100%; */
-}
-
-@keyframes starsFall {
-  0% {
-    background-position: 0 0, 50px 50px;
-  }
-  100% {
-    background-position: 0 100%, 50px 100%;
-  }
 }
