@@ -11,8 +11,6 @@ import NextLink from "next/link";
 import { scrollToSection } from "../_lib/scrollToSection";
 
 export default function Navbar() {
-  const navbarHeight = 76;
-
   return (
     <nav aria-label="Главная навигация">
       <Box as="div" css={styles.navbarContainer}>
@@ -36,7 +34,7 @@ export default function Navbar() {
                   href="#planetsSection"
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection("planetsSection", navbarHeight);
+                    scrollToSection("planetsSection");
                   }}
                 >
                   Планеты

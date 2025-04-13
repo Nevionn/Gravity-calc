@@ -19,8 +19,6 @@ export default function InputWeight({
 }) {
   const [isHuman, setIsHuman] = useState(true);
 
-  const navbarHeight = 76;
-
   const calculateWeights = () => {
     const newPlanetWeights = planets.reduce((acc, planet) => {
       acc[planet.name] = parseFloat((weight * planet.gravity).toFixed(2));
@@ -29,7 +27,7 @@ export default function InputWeight({
 
     setPlanetWeights(newPlanetWeights);
 
-    scrollToSection("planetsSection", navbarHeight);
+    scrollToSection("planetsSection");
   };
 
   const resetWeights = () => {
