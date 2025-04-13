@@ -29,7 +29,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <div ref={footerRef} css={[styles.footer, isVisible && styles.animate]}>
+    <footer ref={footerRef} css={[styles.footer, isVisible && styles.animate]}>
       <Flex justify="between" align="center" direction="row" gap="20px">
         <Text css={styles.text}>
           <a
@@ -53,7 +53,7 @@ export default function Footer() {
           <Gitlab size={32} color="#fc6d26" />
         </a>
       </Flex>
-    </div>
+    </footer>
   );
 }
 
