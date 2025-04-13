@@ -79,17 +79,18 @@ const styles = {
     );
     -webkit-background-clip: text;
     color: transparent;
+    margin-bottom: 8px;
 
     @media (max-width: 900px) {
       font-size: 36px;
     }
 
     @media (max-width: 840px) {
-      font-size: 32px;
+      font-size: 30px;
     }
 
     @media (max-width: 470px) {
-      font-size: 22px;
+      font-size: 23px;
     }
   `,
   subtitle: css`
@@ -97,9 +98,10 @@ const styles = {
     text-align: center;
     font-size: 20px;
     font-weight: 500;
+    margin-top: 0;
 
     @media (max-width: 450px) {
-      font-size: 18px;
+      font-size: 17px;
     }
 
     @media (max-width: 430px) {
