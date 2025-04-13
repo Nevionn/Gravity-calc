@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 "use client";
-import { css } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 import { useState } from "react";
 import { Box, Flex, Text, Button, Slider, Checkbox } from "@radix-ui/themes";
 import { planets } from "../_lib/planets";
@@ -135,6 +135,15 @@ export default function InputWeight({
   );
 }
 
+const wave = keyframes`
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+`;
+
 const styles = {
   textLabelWrapper: css({
     alignSelf: "flex-start",
@@ -231,16 +240,39 @@ const styles = {
     alignSelf: "flex-end",
   }),
   button: css({
+    position: "relative",
     padding: "20px 20px",
-    backgroundColor: "#8b00ff",
-    backgroundImage:
-      "linear-gradient(to right, rgb(210, 49, 210), rgb(114, 14, 186))",
+    background: "linear-gradient(90deg,rgb(210, 49, 210), rgb(114, 14, 186))",
     color: "white",
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
+    overflow: "hidden",
+    zIndex: 1,
+    transition: "transform 0.2s",
+
     ":hover": {
-      backgroundColor: "#5c00b1",
+      transform: "scale(1.03)",
+    },
+
+    // Элемент для свечения
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: "-100%",
+      width: "100%",
+      height: "100%",
+      background:
+        "linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent)",
+      transform: "skewX(-20deg)",
+      zIndex: 2,
+      pointerEvents: "none",
+    },
+
+    ":hover::before": {
+      animation: `${wave} 0.8s ease-out 1`,
+      animationFillMode: "forwards",
     },
 
     "@media (max-width: 430px)": {
