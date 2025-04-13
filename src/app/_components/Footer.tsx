@@ -33,7 +33,7 @@ export default function Footer() {
       <Flex justify="between" align="center" direction="row" gap="20px">
         <Text css={styles.text}>
           <a
-            href="https://gitlab.com/"
+            href="https://gitlab.com/web4450122/gravity-calc/-/tree/master"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitLab профиль Nevionn"
@@ -44,7 +44,7 @@ export default function Footer() {
         </Text>
 
         <a
-          href="https://gitlab.com/"
+          href="https://gitlab.com/web4450122/gravity-calc/-/tree/master"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitLab репозиторий"
