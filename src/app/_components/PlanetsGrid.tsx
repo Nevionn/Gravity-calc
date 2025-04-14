@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import { Box, Flex, Text } from "@radix-ui/themes";
 import { planets } from "../_lib/planets";
+import Image from "next/image";
 
 interface PlanetsProps {
   planetWeights: { [key: string]: number };
@@ -28,8 +29,13 @@ export default function PlanetsGrid({ planetWeights }: PlanetsProps) {
               ]}
             >
               <Flex align="center" gap="3" mb="3">
-                <div css={[styles.icon, { backgroundColor: planet.color }]}>
-                  {planet.icon}
+                <div css={[styles.icon]}>
+                  <Image
+                    src={planet.icon}
+                    alt={planet.name}
+                    width={36}
+                    height={36}
+                  />
                 </div>
                 <Text weight="bold" size="4">
                   {planet.name}
