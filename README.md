@@ -1,6 +1,6 @@
 # Open Source Project by Nevionn
 
-[Калькулятор для расчета веса на различных космических объектах]()
+[Калькулятор для расчета веса на различных космических объектах](http://89.105.198.219/)
 
 <div align="center" style="display: flex; align-items: center;">
   <img src="./public/preview.png" alt="App preview1" width="600" height="800">
@@ -9,9 +9,9 @@
 # Стек технологий
 
 <div align="center" style="display: flex; align-items: center;">
-<img src="https://cdn.simpleicons.org/nextdotjs/000?width=40" alt="Next.js Logo" width="100" height="100" />
-<img src="https://cdn.simpleicons.org/typescript/3178c6?width=40" alt="TypeScript Logo" width="100" height="100" />
-<img src="https://cdn.simpleicons.org/radixui/000?width=40" alt="Radix Logo" width="100" height="100" />
+<img src="https://cdn.simpleicons.org/nextdotjs/000?width=40" alt="Next.js Logo" width="100" height="100" style="fill:#000000" />
+<img src="https://cdn.simpleicons.org/typescript/3178c6?width=40" alt="TypeScript Logo" width="100" height="100" style="fill:#3178C6" />
+<img src="https://cdn.simpleicons.org/radixui/000?width=40" alt="Radix Logo" width="100" height="100" style="fill:#161618" />
 <img src="https://raw.githubusercontent.com/emotion-js/emotion/main/emotion.png" alt="emotion.js" width="100" height="100">
 
 </div>
