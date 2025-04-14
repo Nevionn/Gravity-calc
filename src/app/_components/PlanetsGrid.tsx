@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-"use client";
 import { css } from "@emotion/react";
 import { Box, Flex, Text } from "@radix-ui/themes";
 import { planets } from "../_lib/planets";
@@ -15,7 +14,19 @@ export default function PlanetsGrid({ planetWeights }: PlanetsProps) {
         <Text css={styles.textYourWeight}>Ваш вес на других объектах</Text>
         <div css={styles.gridContainer}>
           {planets.map((planet) => (
-            <Box key={planet.name} css={styles.card}>
+            <Box
+              key={planet.name}
+              css={[
+                styles.card,
+                css({
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                    boxShadow: `0 0 20px 5px ${planet.color}88, 0 4px 12px rgba(0,0,0,0.3)`,
+                    transition: "transform 0.2s ease, box-shadow 0s",
+                  },
+                }),
+              ]}
+            >
               <Flex align="center" gap="3" mb="3">
                 <div css={[styles.icon, { backgroundColor: planet.color }]}>
                   {planet.icon}
@@ -72,12 +83,7 @@ const styles = {
     color: "white",
     backgroundColor: "#1e1e1e",
     boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-    transition: "transform 0.2s ease, box-shadow 0.3s ease",
-    "&:hover": {
-      transform: "scale(1.03)",
-      boxShadow:
-        "0 0 20px 5px rgba(138, 43, 226, 0.4), 0 4px 12px rgba(0,0,0,0.3)",
-    },
+    transition: "transform 0.2s ease, box-shadow 1.2s ease-out", // задержка на исчезновение
 
     "@media (max-width: 1300px)": {
       padding: "16px",

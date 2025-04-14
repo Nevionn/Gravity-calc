@@ -16,7 +16,7 @@ export const planets = [
   {
     name: "Венера",
     gravity: 0.91,
-    color: "#e5c16c",
+    color: "#E5946C",
     icon: "♀",
     description: "Горячая и таинственная",
   },
