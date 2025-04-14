@@ -47,13 +47,7 @@ export default function InputWeight({
           Ваш вес на Земле (кг)
         </Text>
       </Box>
-      <Flex
-        justify="center"
-        align="center"
-        direction="column"
-        gap="20px"
-        width="100%"
-      >
+      <Flex css={styles.topFlex}>
         <Slider
           aria-label="Вес на Земле в килограммах"
           value={[weight]}
@@ -77,47 +71,49 @@ export default function InputWeight({
           </Text>
         </div>
         <Flex css={styles.bottomFlex}>
-          <Box css={styles.indicatorWrapper}>
-            <div css={styles.inputIndicator}>
-              <Text size="3" weight="bold">
-                {weight}
-              </Text>
-              <div css={styles.arrowsItem}>
-                <button
-                  aria-label="Увеличить вес"
-                  css={styles.arrows}
-                  onClick={() =>
-                    setWeight((prev) =>
-                      Math.min(prev + 1, isHuman ? 150 : 10000)
-                    )
-                  }
-                >
-                  ▲
-                </button>
-                <button
-                  aria-label="Уменьшить вес"
-                  css={styles.arrows}
-                  onClick={() => setWeight((prev) => Math.max(prev - 1, 1))}
-                >
-                  ▼
-                </button>
+          <Flex css={styles.combiningBottomFLex}>
+            <Box css={styles.indicatorWrapper}>
+              <div css={styles.inputIndicator}>
+                <Text size="3" weight="bold">
+                  {weight}
+                </Text>
+                <div css={styles.arrowsItem}>
+                  <button
+                    aria-label="Увеличить вес"
+                    css={styles.arrows}
+                    onClick={() =>
+                      setWeight((prev) =>
+                        Math.min(prev + 1, isHuman ? 150 : 10000)
+                      )
+                    }
+                  >
+                    ▲
+                  </button>
+                  <button
+                    aria-label="Уменьшить вес"
+                    css={styles.arrows}
+                    onClick={() => setWeight((prev) => Math.max(prev - 1, 1))}
+                  >
+                    ▼
+                  </button>
+                </div>
               </div>
-            </div>
-          </Box>
-          <Flex align="center" gap="2" css={styles.checkboxWrapper}>
-            <Checkbox
-              checked={isHuman}
-              onCheckedChange={(val) => {
-                setIsHuman(!!val);
-                resetWeights();
-              }}
-              size="2"
-              color="indigo"
-              aria-label="для человека"
-            />
-            <Text size="1" color="gray">
-              для человека
-            </Text>
+            </Box>
+            <Flex align="center" gap="2" css={styles.checkboxWrapper}>
+              <Checkbox
+                checked={isHuman}
+                onCheckedChange={(val) => {
+                  setIsHuman(!!val);
+                  resetWeights();
+                }}
+                size="2"
+                color="indigo"
+                aria-label="для человека"
+              />
+              <Text size="1" color="gray">
+                для человека
+              </Text>
+            </Flex>
           </Flex>
           <Box css={styles.buttonWrapper}>
             <Button
@@ -175,13 +171,27 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
   }),
-  bottomFlex: css({
+  topFlex: css({
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "column",
+    gap: "20px",
+    width: "100%",
+  }),
+  bottomFlex: css({
+    justifyContent: "space-between",
+    alignItems: "center",
     flexDirection: "row",
-    gap: "32px",
     width: "100%",
     marginTop: "20px",
+  }),
+  combiningBottomFLex: css({
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "210px",
+    "@media (max-width: 430px)": {
+      width: "190px",
+    },
   }),
   indicatorWrapper: css({
     alignSelf: "flex-start",
@@ -192,15 +202,16 @@ const styles = {
     alignItems: "center",
     flexDirection: "column",
     position: "relative",
-    padding: "10px 40px",
-    width: "10px",
+    height: "40px",
+    width: "72px",
     backgroundColor: "rgb(46, 45, 45)",
     borderRadius: "6px",
     boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.2)",
     color: "white",
 
     "@media (max-width: 430px)": {
-      padding: "10px 22px",
+      height: "40px",
+      width: "62px",
     },
   }),
   arrowsItem: css({
@@ -227,7 +238,7 @@ const styles = {
     },
   }),
   checkboxWrapper: css({
-    marginTop: "8px",
+    marginTop: "22px",
     display: "flex",
     alignItems: "center",
     gap: "6px",
@@ -241,7 +252,8 @@ const styles = {
   }),
   button: css({
     position: "relative",
-    padding: "20px 20px",
+    height: "40px",
+    width: "100px",
     background: "linear-gradient(90deg,rgb(210, 49, 210), rgb(114, 14, 186))",
     color: "white",
     border: "none",
@@ -276,7 +288,8 @@ const styles = {
     },
 
     "@media (max-width: 430px)": {
-      padding: "10px 10px",
+      height: "40px",
+      width: "72px",
     },
   }),
   textInputWeight: css({
