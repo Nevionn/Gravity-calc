@@ -29,6 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="pXS8zYShfWLuN_tmybHS6HmVl7otjJjoXSzq5q7ipp8"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Theme
           appearance="dark"
