@@ -110,7 +110,11 @@ export default function InputWeight({
                 color="indigo"
                 aria-label="для человека"
               />
-              <Text size="1" color="gray">
+              <Text
+                size="1"
+                color="gray"
+                css={{ transform: "translateY(12%)" }}
+              >
                 для человека
               </Text>
             </Flex>
@@ -186,9 +190,12 @@ const styles = {
     marginTop: "20px",
   }),
   combiningBottomFLex: css({
+    display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    height: "100%",
     width: "210px",
+
     "@media (max-width: 430px)": {
       width: "190px",
     },
@@ -238,9 +245,8 @@ const styles = {
     },
   }),
   checkboxWrapper: css({
-    marginTop: "22px",
     display: "flex",
-    alignItems: "center",
+    alignSelf: "flex-end",
     gap: "6px",
 
     "@media (max-width: 450px)": {
