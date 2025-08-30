@@ -19,7 +19,7 @@
 # Установка из исходников
 
 ```bash
-git clone https://github.com/Nevionn/Gravity-calc
+git clone https://github.com/Nevionn/Gravity-calc.git
 
 cd gravity-calc
 
