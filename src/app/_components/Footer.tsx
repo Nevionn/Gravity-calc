@@ -3,7 +3,7 @@
 import { css, keyframes } from "@emotion/react";
 import { useEffect, useRef, useState } from "react";
 import { Flex, Text } from "@radix-ui/themes";
-import { Gitlab } from "lucide-react";
+import { Gitlab, Github } from "lucide-react";
 
 export default function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
@@ -19,7 +19,6 @@ export default function Footer() {
       }
     );
 
-    // Создаем локальную переменную для хранения ссылки на footerRef.current
     const footerElement = footerRef.current;
     if (footerElement) observer.observe(footerElement);
 
@@ -30,10 +29,10 @@ export default function Footer() {
 
   return (
     <footer ref={footerRef} css={[styles.footer, isVisible && styles.animate]}>
-      <Flex justify="between" align="center" direction="row" gap="20px">
+      <Flex justify="between" align="center" direction="row" gap="10px">
         <Text css={styles.text}>
           <a
-            href="https://gitlab.com/web4450122/gravity-calc/-/tree/master"
+            href="https://github.com/Nevionn/Gravity-calc?tab=readme-ov-file"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitLab профиль Nevionn"
@@ -43,15 +42,26 @@ export default function Footer() {
           </a>
         </Text>
 
-        <a
-          href="https://gitlab.com/web4450122/gravity-calc/-/tree/master"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitLab репозиторий"
-          css={styles.iconLink}
-        >
-          <Gitlab size={32} color="#fc6d26" />
-        </a>
+        <div>
+          <a
+            href="https://github.com/Nevionn/Gravity-calc?tab=readme-ov-file"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHab репозиторий"
+            css={styles.iconLink}
+          >
+            <Github size={32} color="#1178e6ff" />
+          </a>
+          <a
+            href="https://gitlab.com/web4450122/gravity-calc/-/tree/master"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitLab репозиторий"
+            css={styles.iconLink}
+          >
+            <Gitlab size={32} color="#fc6d26" />
+          </a>
+        </div>
       </Flex>
     </footer>
   );

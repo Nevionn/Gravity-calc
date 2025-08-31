@@ -16,13 +16,11 @@ export default function Navbar() {
       <Box as="div" css={styles.navbarContainer}>
         <Container py="6">
           <Flex justify="between" align="center" css={styles.navbarFlex}>
-            {/* Логотип */}
             <Text size="7" weight="bold" css={styles.title}>
               <RadixLink asChild underline="none" css={styles.link}>
                 <NextLink href="/">🚀 GravityCalc</NextLink>
               </RadixLink>
             </Text>
-            {/* Навигационные ссылки */}
             <Flex gap="4">
               <RadixLink
                 asChild
