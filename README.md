@@ -1,6 +1,6 @@
 # Open Source Project by Nevionn
 
-[Калькулятор для расчета веса на различных космических объектах](http://89.105.198.219/)
+[Калькулятор для расчета веса на различных космических объектах](https://gravity-calc.vercel.app/)
 
 <div align="center" style="display: flex; align-items: center;">
   <img src="./public/preview.png" alt="App preview1" width="600" height="800">
