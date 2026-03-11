@@ -1,5 +1,3 @@
-# Open Source Project by Nevionn
-
 [Калькулятор для расчета веса на различных космических объектах](https://gravity-calc.vercel.app/)
 
 <div align="center" style="display: flex; align-items: center;">
